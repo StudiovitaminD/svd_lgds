@@ -1,0 +1,29 @@
+:root {
+  --ds-color-white: #ffffff;
+  --ds-color-black: #000000;
+
+  --ds-color-neutral-50: #fafafa;
+  --ds-color-neutral-100: #f5f5f5;
+  --ds-color-neutral-200: #e5e5e5;
+  --ds-color-neutral-300: #d4d4d4;
+  --ds-color-neutral-400: #a3a3a3;
+  --ds-color-neutral-500: #737373;
+  --ds-color-neutral-600: #525252;
+  --ds-color-neutral-700: #404040;
+  --ds-color-neutral-800: #262626;
+  --ds-color-neutral-900: #171717;
+
+  --ds-color-background: var(--ds-color-white);
+  --ds-color-foreground: var(--ds-color-neutral-900);
+
+  --ds-color-surface: var(--ds-color-white);
+  --ds-color-surface-muted: var(--ds-color-neutral-100);
+
+  --ds-color-border: var(--ds-color-neutral-200);
+  --ds-color-border-strong: var(--ds-color-neutral-300);
+
+  --ds-color-success: #16a34a;
+  --ds-color-warning: #ca8a04;
+  --ds-color-error: #dc2626;
+  --ds-color-info: #2563eb;
+}

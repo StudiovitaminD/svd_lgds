@@ -1,0 +1,12 @@
+:root {
+  --ds-shadow-none: none;
+
+  --ds-shadow-sm:
+    0 1px 2px rgb(0 0 0 / 0.05);
+
+  --ds-shadow-md:
+    0 4px 6px rgb(0 0 0 / 0.1);
+
+  --ds-shadow-lg:
+    0 10px 15px rgb(0 0 0 / 0.1);
+}
