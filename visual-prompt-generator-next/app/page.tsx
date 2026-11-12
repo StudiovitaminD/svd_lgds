@@ -101,13 +101,18 @@ export default function Home() {
     catch { setStatus("Copy is unavailable here. Please try again in a supported browser."); }
   };
 
-  return <main>
-    <header className="studio-lockup">
-      <Image src="/visual-prompt-studio-logo.svg" alt="Visual Prompt Studio" width={42} height={43} priority />
-      <span>Visual Prompt Studio</span>
+  return <>
+    <header className="navbar">
+      <div className="navbar-inner">
+        <div className="studio-lockup">
+          <Image src="/visual-prompt-studio-logo.svg" alt="Visual Prompt Studio" width={59} height={60} priority />
+          <span>Visual Prompt Studio</span>
+        </div>
+      </div>
     </header>
-    <h1>Build your visual prompt</h1>
-    <form onSubmit={(event) => event.preventDefault()}>
+    <main>
+      <h1>Build your visual prompt</h1>
+      <form onSubmit={(event) => event.preventDefault()}>
       <div className="full"><textarea id="subject" name="subject" aria-label="Subject / story" value={values.subject} onChange={update} placeholder="Subject / story" /></div>
       <Select field="application" label="Application" value={values.application} onChange={update} />
       <Select field="style" label="Art style" value={values.style} onChange={update} />
@@ -120,8 +125,9 @@ export default function Home() {
       <Select field="swamiji" label="Swamiji Photo" value={values.swamiji} onChange={update} />
       <Select field="logoTone" label="Learn geeta Logo color" value={values.logoTone} onChange={update} />
       <div className="full"><button type="button" className="copy" onClick={copyPrompt}><CopyIcon /> <span>Copy complete AI prompt</span></button><p className="status" role="status" aria-live="polite">{status}</p></div>
-    </form>
-  </main>;
+      </form>
+    </main>
+  </>;
 }
 
 function Select<K extends Field>({ field, label, value, onChange, full = false }: { field: K; label: string; value: FormValues[K]; onChange: (event: ChangeEvent<HTMLSelectElement>) => void; full?: boolean }) {
