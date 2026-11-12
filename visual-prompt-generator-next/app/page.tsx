@@ -94,8 +94,8 @@ export default function Home() {
     <header className="navbar">
       <div className="navbar-inner">
         <div className="studio-lockup">
-          <Image src="/visual-prompt-studio-logo.svg" alt="Visual Prompt Studio" width={59} height={60} priority />
-          <span>Visual Prompt Studio</span>
+          <Image src="/visual-prompt-studio-logo.svg" alt="Learn Geeta Prompt Studio" width={59} height={60} priority />
+          <span>Learn Geeta Prompt Studio</span>
         </div>
       </div>
     </header>
