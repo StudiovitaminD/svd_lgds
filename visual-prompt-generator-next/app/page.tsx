@@ -93,7 +93,6 @@ export default function Home() {
   };
 
   return <main>
-    <header><span className="brand">learn geeta</span><span className="tag">Visual prompt studio</span></header>
     <h1>Build your visual prompt</h1>
     <form onSubmit={(event) => event.preventDefault()}>
       <div className="full"><label htmlFor="subject">Subject / story</label><textarea id="subject" name="subject" value={values.subject} onChange={update} placeholder="Describe the scene you want to create…" /></div>
