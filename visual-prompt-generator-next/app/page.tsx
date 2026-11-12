@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import { ChangeEvent, useMemo, useState } from "react";
 import Image from "next/image";
 
 const options = {
@@ -78,17 +78,6 @@ export default function Home() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [status, setStatus] = useState("");
   const prompt = useMemo(() => makePrompt(values), [values]);
-
-  useEffect(() => {
-    try {
-      const saved = JSON.parse(window.localStorage.getItem("learn-geeta-prompt-v2") || "null");
-      if (saved) setValues({ ...initialValues, ...saved });
-    } catch { /* A blocked or invalid local storage value should not affect the app. */ }
-  }, []);
-
-  useEffect(() => {
-    try { window.localStorage.setItem("learn-geeta-prompt-v2", JSON.stringify(values)); } catch { /* Storage is optional. */ }
-  }, [values]);
 
   const update = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const key = event.target.name as keyof FormValues;
