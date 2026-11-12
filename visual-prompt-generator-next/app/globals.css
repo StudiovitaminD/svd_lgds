@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: radial-gradient(circle at 80% -20%, #2e352d 0, #181818 34rem); }
 main { max-width: 1100px; margin: auto; padding: 42px 24px 40px; }
-.navbar { width: 100%; border-bottom: 1px solid #303030; background: #181818; }
+.navbar { position: sticky; top: 0; z-index: 10; width: 100%; border-bottom: 1px solid #303030; background: #181818; }
 .navbar-inner { max-width: 1100px; margin: auto; padding: 16px 24px; }
 .studio-lockup { display: flex; align-items: center; gap: 13px; }
 .studio-lockup img { width: 59px; height: 60px; }
