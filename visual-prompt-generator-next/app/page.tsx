@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 
 const options = {
   logoTone: ["Monotone", "Full color"],
@@ -101,6 +102,10 @@ export default function Home() {
   };
 
   return <main>
+    <header className="studio-lockup">
+      <Image src="/visual-prompt-studio-logo.svg" alt="Visual Prompt Studio" width={42} height={43} priority />
+      <span>Visual Prompt Studio</span>
+    </header>
     <h1>Build your visual prompt</h1>
     <form onSubmit={(event) => event.preventDefault()}>
       <div className="full"><textarea id="subject" name="subject" aria-label="Subject / story" value={values.subject} onChange={update} placeholder="Subject / story" /></div>
